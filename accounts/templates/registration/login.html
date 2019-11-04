@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="post" class="form-group">
+  {% csrf_token %}
+  {{ form }}
+
+  <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+
+  <button type="submit" class="btn btn-success">Login</button>
+  <p>Don't have an account? Create one <a href="/register">here</a></p>
+</form>
+{% endblock %}
+© 2019 GitHub, Inc.
